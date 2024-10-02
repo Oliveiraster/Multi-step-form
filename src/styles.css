@@ -11,6 +11,7 @@
 :root{
      /* Primary */
     --Marine_blue: hsl(213, 96%, 18%) ;
+    --Marine_hover: hsl(213, 96%, 35%);
     --Purplish-blue: hsl(243, 100%, 62%);
     --Pastel_blue: hsl(228, 100%, 84%);
     --Light_blue: hsl(206, 94%, 87%);
