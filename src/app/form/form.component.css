@@ -1,0 +1,39 @@
+main{
+    border-radius: 8px;
+    display: flex;
+    color: black;
+    align-items: center;
+    flex-grow: 1;
+    width: 900px;
+    height: 600px;
+    background-color:var(--White);
+    padding: 10px;
+}
+
+
+.form {
+    justify-self: end;
+    height: 100%;
+    width: 100%;
+    padding: 3em  5em;
+   
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
+.title h2{
+    font-weight: 700;
+    color: var(--Marine_blue);
+}
+.title p{
+    font-weight: 400;
+    color: var(--Cool_gray);
+}
+.box_button{
+    display: flex;
+    justify-content: space-between;
+}

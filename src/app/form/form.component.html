@@ -1,0 +1,52 @@
+<main>
+    <section class="img">
+        <img src="/images/bg-sidebar-desktop.svg">
+    </section>
+    <section class="form" >
+
+        <form class="form1" *ngIf="currentStep === 1">
+            <div class="title">
+                <h2 >Personal info</h2>
+                <p>Please provide your name, email address, and phone number.</p>
+            </div> 
+            <label for="name">Nome</label>
+            <input id="name" name="formData" type="text" [(ngModel)]="formData.name" placeholder="Nome" required>
+            <label for="email">Email</label>
+            <input id="email" name="formData" type="email" [(ngModel)]="formData.email" placeholder="Email" required>
+            <label for="phone">Telefone</label>
+            <input id="phone" name="formData" type="phone" [(ngModel)]="formData.email" placeholder="Telefone" required>
+            
+        </form>
+        
+    
+        <form class="form2" *ngIf="currentStep === 2">
+        <div class="title">
+            <h2>Select your plan</h2>
+            <p>You have the option of monthly or yealy billing</p>
+        </div>
+        </form>
+        
+        
+        <form class="form3" *ngIf="currentStep === 3">
+        <div class="title">
+            <h2>Pick add-ons</h2>
+            <p>Add-ons help enhance your gaming experience.</p>
+        </div>
+        </form>
+        <form class="form3" *ngIf="currentStep === 4">
+            <div class="title">
+                <h2>Finishing up</h2>
+                <p>Double-check everything looks OK before confirming.</p>
+            </div>
+        </form>
+        <div class="box_button">
+            <div>
+                <button *ngIf="currentStep > 1" type="button" (click)="prevStep()">Voltar</button>
+            </div>
+            <div >
+                <button *ngIf="currentStep !== 4" type="button" (click)="nextStep()">Próxima</button>
+                <button *ngIf="currentStep === 4" type="button" (click)="submitForm()">Enviar</button>
+            </div>
+        </div>
+    </section>
+</main>
